@@ -1,0 +1,6 @@
+* CIS 194
+This is my poor attempt at University of Pennsylvania’s CIS 194 course.  It is online for free at [[University of Pennsylvania’s CIS 194][https://www.seas.upenn.edu/~cis1940/spring13/lectures.html]].
+
+* Notice
+I do not claim any writes to this course nor it's content.  I am just storing my lousy attempt of learning Haskell. This is not an complete collection (some stuff in week 4 is missing).
+
