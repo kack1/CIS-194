@@ -1,5 +1,8 @@
+{-# LANGUAGE TypeSynonymInstances #-}
+
 import ExprT
 import Parser (parseExp)
+import StackVM
 
 -- Exercise 1
 eval :: ExprT -> Integer
@@ -65,3 +68,12 @@ testBool = testExp :: Maybe Bool
 testMM = testExp :: Maybe MinMax
 
 testSat = testExp :: Maybe Mod7
+
+-- Exercise 5
+instance Expr Program where
+  lit x = [StackVM.PushI x]
+  add x y = x ++ y ++ [StackVM.Add]
+  mul x y = x ++ y ++ [StackVM.Mul]
+
+compile :: String -> Maybe Program
+compile = parseExp lit add mul
