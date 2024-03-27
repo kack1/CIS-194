@@ -38,7 +38,7 @@ streamToList :: Stream a -> [a]
 streamToList (Cons x xs) = x : streamToList xs
 
 instance Show a => Show (Stream a) where
-  show = show . take 20 . streamToList
+  show = show . take 100 . streamToList
 
 -- Excersice 4
 streamRepeat :: a -> Stream a
